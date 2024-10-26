@@ -1,0 +1,149 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #498327;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+.ifpr{
+  justify-content: flex-start;
+  width: 10%;
+  height: 10%;
+
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* Main e Seções */
+main {
+  padding: 20px;
+}
+
+.projects {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-item {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: calc(33.333% - 40px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Wrapper do Iframe para controle de proporção */
+.iframe-wrapper {
+  transform: scale(1);
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Mantém a proporção de 16:9 */
+  height: 100%;
+  overflow: hidden;
+}
+.tab{
+  height:60%;
+}
+
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: px;
+}
+
+.project-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Rodapé */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .project-item {
+      width: calc(50% - 40px); /* Em telas médias, 2 colunas */
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 2rem;
+  }
+
+  header p {
+      font-size: 1rem;
+  }
+
+  .project-item {
+      width: 100%; /* Em telas menores, 1 coluna */
+  }
+
+  .iframe-wrapper {
+      padding-bottom: 56.25%; /* Ajuste para manter a proporção 16:9 */
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 1.5rem;
+  }
+
+  header p {
+      font-size: 0.9rem;
+  }
+
+  .iframe-wrapper {
+      padding-bottom: 56.25%; /* Ajuste para dispositivos móveis */
+  }
+}
